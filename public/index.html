@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>College Placement Portal</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body class="min-h-screen bg-slate-50">
+  <div class="max-w-4xl mx-auto p-6">
+    <header class="flex items-center justify-between py-6">
+      <h1 class="text-2xl font-bold">College Placement Portal</h1>
+      <nav class="space-x-3">
+        <a class="btn" href="/student-login.html">Student Login</a>
+        <a class="btn btn-primary" href="/admin.html">Admin</a>
+      </nav>
+    </header>
+
+    <section class="mt-12 grid gap-6 md:grid-cols-2">
+      <div class="card p-6">
+        <h2 class="text-xl font-semibold mb-2">For Students</h2>
+        <p class="text-slate-600">Sign in with your name and email, then take the placement exam assigned to you.</p>
+        <a class="btn mt-4" href="/student-login.html">Get Started</a>
+      </div>
+      <div class="card p-6">
+        <h2 class="text-xl font-semibold mb-2">For Admins</h2>
+        <p class="text-slate-600">Securely manage exams, sections, and questions.</p>
+        <a class="btn btn-primary mt-4" href="/admin.html">Open Admin</a>
+      </div>
+    </section>
+  </div>
+</body>
+</html>

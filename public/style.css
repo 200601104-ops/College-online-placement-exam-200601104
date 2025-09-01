@@ -1,0 +1,16 @@
+/* Minimal utility add-ons on top of Tailwind */
+.btn { display:inline-flex; align-items:center; padding:0.5rem 1rem; border-radius:0.5rem; border:1px solid rgb(203 213 225); background:#fff; transition:background .15s; }
+.btn:hover{ background:rgb(248 250 252); }
+.btn-primary{ background:rgb(79 70 229); color:#fff; border-color:rgb(79 70 229); }
+.btn-primary:hover{ background:rgb(67 56 202); }
+.input { width:100%; border-radius:0.5rem; border:1px solid rgb(203 213 225); padding:0.5rem 0.75rem; background:#fff; outline:none; }
+.input:focus{ box-shadow:0 0 0 2px rgba(79,70,229,.35); border-color:rgb(79 70 229); }
+.label { display:block; font-size:0.875rem; font-weight:600; color:rgb(71 85 105); margin-bottom:0.25rem; }
+.card { background:#fff; border-radius:1rem; box-shadow:0 1px 2px rgba(0,0,0,.04); border:1px solid rgb(226 232 240); }
+.th { padding:0.75rem 1rem; font-size:0.875rem; font-weight:600; color:rgb(71 85 105); }
+.td { padding:0.75rem 1rem; font-size:0.875rem; }
+.modal { width: 100%; max-width: 720px; border: none; border-radius: 1rem; padding: 0; }
+.modal::backdrop { background: rgba(0,0,0,0.35); }
+.modal-box { padding: 1.25rem 1.25rem 1rem; }
+.hidden { display: none; }
+.small { font-size:.85rem; color:rgb(100 116 139); }

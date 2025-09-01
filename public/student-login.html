@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Student Login • Placement Portal</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body class="min-h-screen bg-slate-50 grid place-items-center">
+  <div class="card p-8 w-full max-w-md">
+    <h1 class="text-2xl font-bold mb-2">Student Login</h1>
+    <p class="text-slate-600 mb-6">Enter your details to continue.</p>
+    <form id="student-login-form" class="grid gap-3">
+      <input class="input" name="name" placeholder="Full name" required />
+      <input class="input" name="email" placeholder="Email" type="email" required />
+      <button class="btn btn-primary" type="submit">Continue</button>
+    </form>
+  </div>
+  <script type="module" src="/api.js"></script>
+  <script type="module" src="/student.js"></script>
+</body>
+</html>

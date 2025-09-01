@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Admin — Placement Exam</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <style>
+    body{font-family:system-ui,Segoe UI,Roboto,Helvetica,Arial;background:#f6f8fa;color:#111;padding:18px}
+    .card{background:#fff;border:1px solid #e1e4e8;padding:16px;margin-bottom:14px;border-radius:6px}
+    label{display:block;margin-top:8px;font-weight:600}
+    input,select,textarea{width:100%;padding:8px;margin-top:6px;border:1px solid #dfe3e6;border-radius:4px}
+    button{margin-top:10px;padding:8px 12px;border-radius:6px;border:0;background:#0366d6;color:#fff;cursor:pointer}
+    .muted{color:#6a737d;font-size:0.9em}
+    table{width:100%;border-collapse:collapse;margin-top:10px}
+    th,td{padding:8px;border-bottom:1px solid #e6ebee;text-align:left}
+    .danger{background:#d73a49}
+    .row{display:flex;gap:12px}
+    .col{flex:1}
+    .small{width:120px}
+    .msg{padding:8px;border-radius:4px;margin-top:8px}
+    .msg.ok{background:#e6ffed;color:#024c1b}
+    .msg.err{background:#ffefef;color:#6b0b00}
+  </style>
+</head>
+<body>
+  <h2>Admin console</h2>
+
+  <div class="card" id="loginCard">
+    <h3>Login</h3>
+    <div class="muted">Use admin credentials from .env</div>
+    <label>Username</label>
+    <input id="adminUser" value="admin" />
+    <label>Password</label>
+    <input id="adminPass" type="password" value="changeme" />
+    <button id="btnLogin">Login</button>
+    <div id="loginMsg"></div>
+  </div>
+
+  <div class="card" id="tokenCard" style="display:none">
+    <h4>Token</h4>
+    <div class="muted">Stored in localStorage for API calls</div>
+    <textarea id="tokenBox" rows="2" readonly></textarea>
+    <div style="margin-top:8px">
+      <button id="btnLogout">Logout</button>
+    </div>
+  </div>
+
+  <div class="card" id="resultsCard" style="display:none">
+    <h3>Student results</h3>
+    <button id="btnLoadResults">Load results</button>
+    <div id="resultsList"></div>
+  </div>
+
+  <div class="card" id="manageCard" style="display:none">
+    <h3>Manage Exams / Questions</h3>
+
+    <div class="row">
+      <div class="col">
+        <label>Exam</label>
+        <select id="examSelect"></select>
+      </div>
+      <div class="col">
+        <label>Section</label>
+        <select id="sectionSelect"></select>
+      </div>
+      <div class="small">
+        <label>&nbsp;</label>
+        <button id="btnRefresh">Refresh</button>
+      </div>
+    </div>
+
+    <h4 style="margin-top:12px">Questions in section</h4>
+    <div id="questionsList"></div>
+
+    <h4 style="margin-top:12px">Add question</h4>
+    <label>Question text</label>
+    <textarea id="qText" rows="3"></textarea>
+    <label>Options (comma separated)</label>
+    <input id="qOptions" placeholder="option1, option2, option3, option4" />
+    <div class="row">
+      <div class="col">
+        <label>Correct option index (0-based)</label>
+        <input id="qCorrect" value="0" />
+      </div>
+      <div class="col">
+        <label>Difficulty</label>
+        <select id="qDiff"><option>easy</option><option>medium</option><option>hard</option></select>
+      </div>
+    </div>
+    <button id="btnAddQ">Add question</button>
+    <div id="manageMsg"></div>
+  </div>
+
+  <script src="/admin.js" type="module"></script>
+</body>
+</html>
